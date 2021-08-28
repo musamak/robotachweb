@@ -19,7 +19,7 @@ app.locals = global.gConfig;
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(global.gConfig.node_port || '3000');
+var port = normalizePort(global.gConfig.node_port || '8080');
 app.set('port', port);
 
 /**
