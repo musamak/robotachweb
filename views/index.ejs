@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ./shared/head %>	
+	</head>
+	<body style="overflow:hidden">
+	    
+	    <!-- site preloader start -->
+	    <div class="page-loader">
+	    	<div class="loader-in"></div>
+	    </div>
+	    <!-- site preloader end -->
+	    
+	    <div class="pageWrapper">
+		    
+            <!-- login box start -->
+			<% include ./shared/loginbox %>
+			<!-- login box End -->
+			
+			<!-- Header Start -->
+			<% include ./shared/header %>
+			<!-- Header End -->
+			
+			<!-- Content Start -->
+			<div id="contentWrapper">
+				
+				<!-- Revolution slider start -->
+				<% include ./shared/slider %>
+				<!-- Revolution slider end -->
+				
+				<!-- Welcome Box start -->
+				<% include ./shared/welcomebox %>
+				<!-- Welcome Box end -->
+				
+				<!-- Services boxes style 1 start -->
+				<div class="gry-bg">
+					<div class="container">
+						<div class="row">
+							<div class="cell-3 service-box-1 fx" data-animate="fadeInUp" data-animation-delay="200">
+								<div class="box-top">
+									<i class="fa fa-dice-d20"></i>
+									<h3><%= home_service1_caption %></h3>
+									<p><%= home_service1_para %></p>
+									<!--<a class="more-btn" href="services.html">Read More</a>-->
+								</div>
+							</div>
+							<div class="cell-3 service-box-1 fx" data-animate="fadeInUp" data-animation-delay="400">
+								<div class="box-top">
+									<i class="fa fa-industry"></i>
+									<h3><%= home_service2_caption %></h3>
+									<p><%= home_service2_para %></p>
+									<!--<a class="more-btn" href="services.html">Read More</a>-->
+								</div>
+							</div>
+							<div class="cell-3 service-box-1 fx" data-animate="fadeInUp" data-animation-delay="600">
+								<div class="box-top">
+									<i class="fa fa-robot"></i>									
+									<h3><%= home_service3_caption %></h3>
+									<p><%= home_service3_para %></p>
+									<!--<a class="more-btn" href="services.html">Read More</a>-->
+								</div>
+							</div>
+							<div class="cell-3 service-box-1 fx" data-animate="fadeInUp" data-animation-delay="800">
+								<div class="box-top">
+									<i class="fa fa-connectdevelop"></i>									
+									<h3><%= home_service4_caption %></h3>
+									<p><%= home_service4_para %></p>
+									<!--<a class="more-btn" href="services.html">Read More</a>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Services boxes style 1 start -->
+				
+				<!-- Portfolio start -->
+				<div class="sectionWrapper">
+					<div class="container">
+						<div class="row">
+							<div class="cell-3">
+								<h3 class="block-head side-heading">Recent <span>projects</span></h3>
+								<p class="portfolio-lft-txt"><%= home_projects_main_msg %></p>
+								<div class="viewAll" style="visibility:hidden">
+									<a class="btn" href="portfolio-4-cols.html">Browse All Projects</a>
+								</div>
+							</div>
+							<div class="cell-9">
+								<div class="homeGallery portfolio">
+									<!-- staff item start -->
+									<% if (home_project1_Title != "") { %>
+										<div>
+											<div class="portfolio-item">
+												<div class="img-holder">
+													<div class="img-over">
+														<a href="portfolio-single.html" class="fx link"><b class="fas fa-link"></b></a>
+														<a href="images/portfolio/1.jpeg" class="fx zoom" data-gal="prettyPhoto[pp_gal]" title="<%= home_project1_Title %>" ><b class="fas fa-search-plus"></b></a>
+													</div>
+													<img alt="" src="images/portfolio/1.jpeg" >
+												</div>
+												<div class="name-holder">
+													<a href="#" class="project-name"><%= home_project1_Title %></a>
+													<span class="project-options"><%= home_project1_Category %></span>
+												</div>
+											</div>
+										</div>
+									<% } %>
+									<!-- staff item end -->
+									
+									<!-- staff item start -->
+									<% if (home_project2_Title != "") { %>
+										<div>
+											<div class="portfolio-item">
+												<div class="img-holder">
+													<div class="img-over">
+														<a href="portfolio-single.html" class="fx link"><b class="fas fa-link"></b></a>
+														<a href="images/portfolio/2.jpeg" class="fx zoom" data-gal="prettyPhoto[pp_gal]" title="<%= home_project2_Title %>" ><b class="fas fa-search-plus"></b></a>
+													</div>
+													<img alt="" src="images/portfolio/2.jpeg" >
+												</div>
+												<div class="name-holder">
+													<a href="#" class="project-name"><%= home_project2_Title %></a>
+													<span class="project-options"><%= home_project2_Category %></span>
+												</div>
+											</div>
+										</div>
+									<% } %>
+									<!-- staff item end -->
+									
+									<!-- staff item start -->
+									<% if (home_project3_Title != "") { %>
+										<div>
+											<div class="portfolio-item">
+												<div class="img-holder">
+													<div class="img-over">
+														<a href="portfolio-single.html" class="fx link"><b class="fas fa-link"></b></a>
+														<a href="images/portfolio/3.jpeg" class="fx zoom" data-gal="prettyPhoto[pp_gal]" title="<%= home_project3_Title %>" ><b class="fas fa-search-plus"></b></a>
+													</div>
+													<img alt="" src="images/portfolio/3.jpeg" >
+												</div>
+												<div class="name-holder">
+													<a href="#" class="project-name"><%= home_project3_Title %></a>
+													<span class="project-options"><%= home_project3_Category %></span>
+												</div>
+											</div>
+										</div>
+									<% } %>
+									<!-- staff item end -->
+									
+									<!-- staff item start -->
+									<% if (home_project4_Title != "") { %>
+										<div>
+											<div class="portfolio-item">
+												<div class="img-holder">
+													<div class="img-over">
+														<a href="portfolio-single.html" class="fx link"><b class="fas fa-link"></b></a>
+														<a href="images/portfolio/4.jpeg" class="fx zoom" data-gal="prettyPhoto[pp_gal]" title="<%= home_project4_Title %>" ><b class="fas fa-search-plus"></b></a>
+													</div>
+													<img alt="" src="images/portfolio/4.jpeg" >
+												</div>
+												<div class="name-holder">
+													<a href="#" class="project-name"><%= home_project4_Title %></a>
+													<span class="project-options"><%= home_project4_Category %></span>
+												</div>
+											</div>
+										</div>
+									<% } %>
+									<!-- staff item end -->
+									
+									<!-- staff item start -->
+									<% if (home_project5_Title != "") { %>
+										<div>
+											<div class="portfolio-item">
+												<div class="img-holder">
+													<div class="img-over">
+														<a href="portfolio-single.html" class="fx link"><b class="fas fa-link"></b></a>
+														<a href="images/portfolio/5.jpeg" class="fx zoom" data-gal="prettyPhoto[pp_gal]" title="<%= home_project5_Title %>" ><b class="fas fa-search-plus"></b></a>
+													</div>
+													<img alt="" src="images/portfolio/5.jpeg" >
+												</div>
+												<div class="name-holder">
+													<a href="#" class="project-name"><%= home_project5_Title %></a>
+													<span class="project-options"><%= home_project5_Category %></span>
+												</div>
+											</div>
+										</div>
+									<% } %>
+									<!-- staff item end -->
+									
+								</div><!-- .portfolioGallery end -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Portfolio end -->
+				
+			</div>
+			<!-- Content End -->
+			
+			<!-- Footer start -->
+			<% include ./shared/footer %>	
+			<!-- Footer end -->
+		    
+		    <!-- Back to top Link -->
+	    	<div id="to-top" class="main-bg"><span class="fa fa-chevron-up"></span></div>
+	    
+	    </div>
+	    
+      <% include ./shared/scripts %>	
+	</body>
+</html>

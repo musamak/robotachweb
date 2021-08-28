@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ./shared/head %>	
+	</head>
+	<body style="overflow:hidden">
+	    
+	    <!-- site preloader start -->
+	    <div class="page-loader">
+	    	<div class="loader-in"></div>
+	    </div>
+	    <!-- site preloader end -->
+	    
+	    <div class="pageWrapper">
+		    
+		    <!-- login box start -->
+			<% include ./shared/loginbox %>
+			<!-- login box End -->
+			
+			<!-- Header Start -->
+			<% include ./shared/header %>
+			<!-- Header End -->
+			
+			<!-- Content Start -->
+			<div id="contentWrapper">
+				<% include ./shared/sitemappgheader %>
+				
+				<div class="padd-top-50">
+					<div class="container">
+						<div class="row">
+			    			<div class="cell-7 contact-form fx" data-animate="fadeInLeft" id="contact">
+								<h3 class="block-head">Get in Touch</h3>
+								<form class="form-signin cform" action="/contactus" id="contact-form" method="post" role="form" autocomplete="on">
+			    					<mark id="message" style="display: none;"></mark>
+			    					<div class="form-input">
+				    					<label>Full name<span class="red">*</span></label>
+				    					<input type="text" required="required" name="name" id="name" placeholder="Enter your full name.">
+			    					</div>
+			    					<div class="form-input">
+			    						<label>Email<span class="red">*</span></label>
+			    						<input name="cemail" type="email" id="cemail" required="required" placeholder="Enter your email address.">
+			    					</div>
+			    					<div class="form-input">
+			    						<label>Phone</label>
+			    						<input name="phone" type="text" id="phone" placeholder="Enter your phone number.">			    						
+			    					</div>
+			    					<div class="form-input">
+			    						<label>Message<span class="red">*</span></label>
+			    						<textarea required="required" name="message" cols="40" rows="7" id="messageTxt" spellcheck="true" placeholder="Enter your message."></textarea>
+			    					</div>
+			    					<div class="form-input">
+			    						<input type="submit" class="btn btn-large main-bg" value="Submit">&nbsp;&nbsp;<input type="reset" class="btn btn-large" value="Reset" id="reset">&nbsp;&nbsp;<span><%= postSuccess %></span>
+			    					</div>
+			    				</form>
+			    			</div>
+			    			<div class="cell-5 contact-detalis">
+			    				<h3 class="block-head">Contact Details</h3>
+			    				<p class="fx" data-animate="fadeInRight"><%= contactus_message %></p>
+			    				<hr class="hr-style4">
+			    				<div class="clearfix"></div>
+			    				<div class="padding-vertical">
+			    					<div class="cell-5 fx" data-animate="fadeInRight">
+				    					<!--<h4 class="main-color bold">Office: USA</h4>-->
+				    					<h5 >Address:</h5>
+				    					<p><%= company_address %></p>
+				    					<h5 >Email:</h5>
+				    					<p><%= info_email %></p>
+				    					<h5 >Phone:</h5>
+				    					<p><%= main_phone %></p>
+				    					<h5 >FAX:</h5>
+				    					<p><%= main_fax %></p>
+				    				</div>
+				    				<div class="cell-2"><br></div>
+				    				<div class="cell-5 fx" data-animate="fadeInRight" style="visibility: hidden;">
+				    					<h4 class="main-color bold">Office: Australia</h4>
+				    					<h5 >Address:</h5>
+				    					<p>123, Second Sunrise Avenue New York,USA</p>
+				    					<h5 >Email:</h5>
+				    					<p>info@it-rays.com
+</p>
+				    					<h5 >Phone:</h5>
+				    					<p>+2 012 000 0000</p>
+				    					<h5 >FAX:</h5>
+				    					<p>+2 012 000 0001</p>
+				    				</div>
+			    				</div>
+			    			</div>
+						</div>
+					</div>
+				</div>
+		
+				
+				<div class="padd-vertical-45">
+					<script type="text/javascript" src="<%= contactus_maps_key %>"></script>
+					<div id="map_canvas" style="height: 450px; width: 100%;">
+				    <script type="text/javascript"> 
+						function init_map(){
+							var latlngVal = "<%= contactus_mapmarker_LatLng %>".split(',');
+							var compaddress = "<%= contactus_mapmarker_address %>".split("*");
+				    		var myOptions = {zoom:17,center:new google.maps.LatLng(latlngVal[0], latlngVal[1]),
+				    		mapTypeId: google.maps.MapTypeId.ROADMAP};
+				    		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				    		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(latlngVal[0], latlngVal[1])});
+				    		infowindow = new google.maps.InfoWindow({content:"<div class='noScroll'><b>Robotach (Private) Limited.</b><br/>"+compaddress[0]+"<br/>"+compaddress[1]+"</div>" });
+				    		google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+				    		infowindow.open(map,marker);} google.maps.event.addDomListener(window, 'load', init_map);
+				    </script>
+		    	</div>
+				
+			</div>
+			<!-- Content End -->
+			
+			<!-- Footer start -->		    
+			<% include ./shared/footer %>	
+			<!-- Footer end -->
+		    
+		    <!-- Back to top Link -->
+	    	<div id="to-top" class="main-bg"><span class="fa fa-chevron-up"></span></div>
+	    
+	    </div>
+	    
+	    <% include ./shared/scripts %>
+	</body>
+</html>

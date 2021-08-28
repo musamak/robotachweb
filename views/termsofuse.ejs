@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ./shared/head %>	
+	</head>
+	<body style="overflow:hidden">
+	    
+	    <!-- site preloader start -->
+	    <div class="page-loader">
+	    	<div class="loader-in"></div>
+	    </div>
+	    <!-- site preloader end -->
+	    
+	    <div class="pageWrapper">
+		    
+		    <!-- login box start -->
+			<% include ./shared/loginbox %>
+			<!-- login box End -->
+			
+			<!-- Header Start -->
+			<% include ./shared/header %>
+			<!-- Header End -->
+			
+			<!-- Content Start -->
+			<div id="contentWrapper">
+				<% include ./shared/sitemappgheader %>
+				
+				<div class="sectionWrapper">
+					<div class="container">
+						<!-- Config File Content Start -->
+						<% var tos = terms_of_use.join('\n'); %>
+						<%- tos %>
+						<!-- Config File Content End -->
+					</div>
+				</div>
+				
+			</div>
+			<!-- Content End -->
+			
+			<!-- Footer start -->
+		    <% include ./shared/footer %>
+		    <!-- Footer end -->
+		    
+		    <!-- Back to top Link -->
+	    	<div id="to-top" class="main-bg"><span class="fa fa-chevron-up"></span></div>
+	    
+	    </div>
+	    
+        <% include ./shared/scripts %>
+	</body>
+</html>

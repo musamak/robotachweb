@@ -1,0 +1,143 @@
+<!-- views/shared/footer.ejs -->
+<!-- Footer start -->
+<footer id="footWrapper">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- contact us footer cell start -->
+                <div class="cell-3">
+                    <h3 class="block-head">Keep in Touch</h3>
+                    <ul>
+                        <li class="footer-contact"><i class="fas fa-home"></i><span><%= company_address %></span></li>
+                        <li class="footer-contact"><i class="fas fa-globe-americas"></i><span><a href="#"><%= info_email %></a></span></li>
+                        <li class="footer-contact"><i class="fas fa-phone"></i><span><%= main_phone %></span></li>
+                        <li class="footer-contact"><i class="fas fa-map-marker-alt"></i><span><a href="contactus#map_canvas">View our map</a></span></li>
+                    </ul>
+                </div>
+                <!-- contact us footer cell end -->
+                
+                <!-- Newsletters footer cell start -->
+                <div class="cell-3">
+                    <h3 class="block-head">Subscribe Now</h3>
+                    <p class="no-margin">Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
+                    <form class="NL" action="/index" id="subscribeEmail-form" method="post" role="form" autocomplete="on">
+                        <div class="skew-25 input-box left">
+                            <input name="email" type="email" id="email" class="txt-box skew25" placeholder="Enter Your Email" required="required">
+                        </div>
+                        <div class="left skew-25 NL-btn">
+                            <input class="btn skew25" type="submit" value="Send" />
+                        </div>
+                    </form>
+                </div>
+                <!-- Newsletters footer cell end -->
+                
+                <!-- latest tweets footer cell start -->
+                <div class="cell-3">
+                    <h3 class="block-head">Latest Tweets</h3>
+                    <div class="tweet">
+                        <p><span class="fa fa-twitter"></span>Check our portfolio at <a href="#"><%= company_twitter_name %></a> to get more information about us.</p>
+                        <p><a href="<%= company_twitter_url %>"><%= company_twitter_url %></a></p>
+                        <!--<p>30 Jan. 2014</p>-->
+                    </div>
+                </div>
+                <!-- latest tweets footer cell end -->
+                
+                <!-- flickr stream footer cell start -->
+                <div class="cell-3 flickr-stream-w">
+                    <h3 class="block-head">Instagram Posts</h3>
+                    <ul>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/1.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/2.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/3.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/4.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/5.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/6.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/7.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/8.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/9.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="<%= company_instagram_url %>" title="" target="_blank" >
+                                <img src="images/instagram/10.jpeg" alt=""><span class="img-overlay"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- flickr stream footer cell end -->
+                
+            </div>
+        </div>	
+    </div>
+            
+    <!-- footer bottom bar start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <!-- footer copyrights left cell -->
+                <div class="copyrights cell-5">&copy; Copyrights <b>Robotach</b><%- (new Date()).getFullYear() %>. All rights reserved. <span><a href="privacypolicy" target="_blank">Privacy policy</a> | <a href="termsofuse" target="_blank">Terms of use</a></span></div>
+                
+                <!-- footer social links right cell start -->
+                <div class="cell-7">
+                    <ul class="social-list right">
+                        <% if(company_linkedin_url != "") { %>
+                        <li class="skew-25"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
+                        <% } else { %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
+                        <% } if(company_facebook_url != "") { %>
+                        <li class="skew-25"><a href="<%= company_facebook_url %>" data-title="facebook" data-tooltip="true" target="_blank" ><span class="fa fa-facebook skew25"></span></a></li>
+                        <% } else { %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_facebook_url %>" data-title="facebook" data-tooltip="true" target="_blank" ><span class="fa fa-facebook skew25"></span></a></li>
+                        <% } if(company_skype_url != "") { %>
+                        <li class="skew-25" ><a href="<%= company_skype_url %>" data-title="skype" data-tooltip="true" target="_blank" ><span class="fa fa-skype skew25"></span></a></li>
+                        <% } else { %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_skype_url %>" data-title="skype" data-tooltip="true" target="_blank" ><span class="fa fa-skype skew25"></span></a></li>
+                        <% } if(company_youtube_url != "") { %>
+                        <li class="skew-25" ><a href="<%= company_youtube_url %>" data-title="YouTube" data-tooltip="true" target="_blank" ><span class="fa fa-youtube skew25"></span></a></li>
+                        <% } else { %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_youtube_url %>" data-title="YouTube" data-tooltip="true" target="_blank" ><span class="fa fa-youtube skew25"></span></a></li>
+                        <% } %>
+                    </ul>
+                </div>
+                <!-- footer social links right cell end -->
+                
+            </div>
+        </div>
+    </div>
+    <!-- footer bottom bar end -->    
+</footer>
+<!-- end views/shared/footer.ejs -->

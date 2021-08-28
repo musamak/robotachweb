@@ -1,0 +1,90 @@
+<!-- views/shared/header.ejs -->
+<div id="headWrapper" class="head-style2 clearfix">			    
+    <header class="top-head">
+        <div class="container">
+            <div class="row">
+                <div class="bg-head2"></div>
+                <!-- left links before logo start -->
+                <div class="cell-1 head2-lft-links">
+                    <ul style="visibility: hidden;">
+                        <li><a href="#" class="login-btn"><i class="fa fa-unlock-alt"></i> Login</a></li>
+                        <li><a href="register"><i class="fa fa-user"></i>Register</a></li>
+                        <li><a href="siteMap"><i class="fa fa-sitemap"></i>Site Map</a></li>
+                    </ul>
+                </div>
+                <!-- left links before logo end -->
+                
+                <!-- top right links start -->
+                <div class="right-bar right">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-envelope"></i><%= info_email %></a></li>
+                        <li><span><i class="fa fa-phone"></i> Call Us: <%= main_phone %> </span></li>
+                    </ul>
+                </div>
+                <!-- top right links end -->
+                
+                <div class="logo cell-2 ">
+                    <a href="index"></a>
+                </div>
+                
+                <div class="cell-9 top-menu">
+                    
+                    <!-- top navigation menu start -->
+                    <nav class="top-nav">
+                        <% if (menuValue == 'home') { %>
+                            <ul>
+                                <li style="visibility: hidden;"><a href="blogs" class="skew-25"><span class="skew25">Blogs</span></a></li>
+                                <li style="visibility: hidden;"><a href="portfolio" class="skew-25"><span class="skew25">Portfolio</span></a></li>
+                                <li class="selected"><a href="index" class="skew-25"><span class="skew25">Home</span></a></li>
+                                <li><a href="aboutus" class="skew-25"><span class="skew25">About us</span></a></li>
+                                <li><a href="contactus" class="skew-25"><span class="skew25">Contact us</span></a></li>
+                            </ul>
+                        <% } else if (menuValue == 'aboutus') { %>
+                            <ul>
+                                <li style="visibility: hidden;"><a href="blogs" class="skew-25"><span class="skew25">Blogs</span></a></li>
+                                <li style="visibility: hidden;"><a href="portfolio" class="skew-25"><span class="skew25">Portfolio</span></a></li>
+                                <li><a href="index" class="skew-25"><span class="skew25">Home</span></a></li>
+                                <li class="selected"><a href="aboutus" class="skew-25"><span class="skew25">About us</span></a></li>
+                                <li><a href="contactus" class="skew-25"><span class="skew25">Contact us</span></a></li>
+                            </ul>
+                        <% } else if (menuValue == 'contactus') { %>
+                            <ul>
+                                <li style="visibility: hidden;"><a href="blogs" class="skew-25"><span class="skew25">Blogs</span></a></li>
+                                <li style="visibility: hidden;"><a href="portfolio" class="skew-25"><span class="skew25">Portfolio</span></a></li>
+                                <li><a href="index" class="skew-25"><span class="skew25">Home</span></a></li>
+                                <li><a href="aboutus" class="skew-25"><span class="skew25">About us</span></a></li>
+                                <li class="selected"><a href="contactus" class="skew-25"><span class="skew25">Contact us</span></a></li>
+                            </ul>
+                        <% } else { %>
+                            <ul>
+                                <li style="visibility: hidden;"><a href="blogs" class="skew-25"><span class="skew25">Blogs</span></a></li>
+                                <li style="visibility: hidden;"><a href="portfolio" class="skew-25"><span class="skew25">Portfolio</span></a></li>
+                                <li class="selected"><a href="index" class="skew-25"><span class="skew25">Home</span></a></li>
+                                <li><a href="aboutus" class="skew-25"><span class="skew25">About us</span></a></li>
+                                <li><a href="contactus" class="skew-25"><span class="skew25">Contact us</span></a></li>
+                            </ul>
+                        <% } %>
+                    </nav>
+                    <!-- top navigation menu end -->
+                    
+                    <!-- top search start ->
+                    <div class="top-search">
+                        <a href="#" class="skew-25"><span class="fa fa-search skew25"></span></a>
+                        <div class="search-box">
+                            <div class="input-box left">
+                                <input type="text" name="t" id="t-search" class="txt-box" placeHolder="Enter search keyword here..." />
+                            </div>
+                            <div class="left">
+                                <input type="submit" id="b-search" class="btn main-bg" value="GO" />
+                            </div>
+                        </div>
+                    </div>
+                    <!- top search end ->
+                    -->
+                    
+                </div>							
+            </div>
+        </div>
+    </header>
+</div>
+<!-- end views/shared/header.ejs -->

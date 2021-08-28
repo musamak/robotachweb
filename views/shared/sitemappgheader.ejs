@@ -1,0 +1,36 @@
+<!-- views/shared/sitemappgheader.ejs -->
+<div class="page-title title-1">
+    <div class="container">
+        <div class="row">
+            <div class="cell-12">
+                <% if (menuValue == 'aboutus') { %>
+                <h1 class="fx" data-animate="fadeInLeft">About <span>Us</span></h1>
+                <div class="breadcrumbs main-bg fx" data-animate="fadeInUp">
+                    <span class="bold">You Are In:</span><a href="#">Home</a><span class="line-separate">/</span><a href="#">Pages </a><span class="line-separate">/</span><span>About us</span>
+                </div>
+                <% } else if (menuValue == 'contactus') { %>
+                <h1 class="fx" data-animate="fadeInLeft">Contact <span>Us</span></h1>
+                <div class="breadcrumbs main-bg fx" data-animate="fadeInUp">
+                    <span class="bold">You Are In:</span><a href="#">Home</a><span class="line-separate">/</span><a href="#">Pages </a><span class="line-separate">/</span><span>Contact us</span>
+                </div>
+                <% } else if (menuValue == 'register') { %>
+                    <h1 class="fx" data-animate="fadeInLeft">Create <span>Account</span></h1>
+                    <div class="breadcrumbs main-bg fx" data-animate="fadeInUp">
+                        <span class="bold">You Are In:</span><a href="#">Home</a><span class="line-separate">/</span><a href="#">Pages </a><span class="line-separate">/</span><span>Register</span>
+                    </div>
+                <% } else if (menuValue == 'privacypolicy') { %>
+                    <h1 class="fx" data-animate="fadeInLeft">Privacy <span>Policy</span></h1>
+                    <div class="breadcrumbs main-bg fx" data-animate="fadeInUp">
+                        <span class="bold">You Are In:</span><a href="#">Home</a><span class="line-separate">/</span><a href="#">Pages </a><span class="line-separate">/</span><span>Privacy policy</span>
+                    </div>
+                <% } else if (menuValue == 'termsofuse') { %>
+                    <h1 class="fx" data-animate="fadeInLeft">Terms <span>of use</span></h1>
+                    <div class="breadcrumbs main-bg fx" data-animate="fadeInUp">
+                        <span class="bold">You Are In:</span><a href="#">Home</a><span class="line-separate">/</span><a href="#">Pages </a><span class="line-separate">/</span><span>Terms of use</span>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end views/shared/sitemappgheader.ejs -->

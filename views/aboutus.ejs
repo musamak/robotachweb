@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ./shared/head %>	
+	</head>
+	<body style="overflow:hidden">
+	    
+	    <!-- site preloader start -->
+	    <div class="page-loader">
+	    	<div class="loader-in"></div>
+	    </div>
+	    <!-- site preloader end -->
+	    
+	    <div class="pageWrapper">
+		    
+		    <!-- login box start -->
+			<% include ./shared/loginbox %>
+			<!-- login box End -->
+			
+			<!-- Header Start -->
+			<% include ./shared/header %>
+			<!-- Header End -->
+			
+			<!-- Content Start -->
+			<div id="contentWrapper">				
+				<% include ./shared/sitemappgheader %>
+				<div class="sectionWrapper">
+					<div class="container">
+						<div class="fx" data-animate="fadeInUp">
+							<h3 class="block-head">Introduction</h3>
+							<p>
+								<%= about_intro_para %>
+							</p>
+						</div>
+						
+						<div class="clearfix"></div>
+						<div class="padd-top-50">
+							<div class="cell-6 fx" data-animate="fadeInLeft">
+								<div class="row">
+									<div id="tabs" class="tabs">
+										<h3 class="block-head">What we offer?</h3>
+										<ul>
+											<li class="skew-25 active"><a href="#" class="skew25"><i class="fa fa-dice-d20"></i><%= about_services1_name %></a></li>
+											<li class="skew-25"><a href="#" class="skew25"><i class="fas fa-industry"></i><%= about_services2_name %></a></li>
+											<li class="skew-25"><a href="#" class="skew25"><i class="fas fa-robot"></i><%= about_services3_name %></a></li>
+											<li class="skew-25"><a href="#" class="skew25"><i class="fab fa-connectdevelop"></i><%= about_services4_name %></a></li>
+										</ul>
+										<div class="tabs-pane">
+											<div class="tab-panel active">
+													<%- about_services1_desc %>
+											</div>
+											<div class="tab-panel">
+													<%- about_services2_desc %>
+											</div>
+											<div class="tab-panel">
+													<%- about_services3_desc %>
+											</div>
+											<div class="tab-panel">
+													<%- about_services4_desc %>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cell-1"></div>
+							<div class="cell-5 fx" data-animate="fadeInRight">
+								<div class="row">
+									<h3 class="block-head">Who we Are?</h3>
+									<ul id="accordion2" class="accordion">
+										<li>
+											<h3 class="skew-25"><a href="#"><span class="skew25"><i class="fas fa-swimmer"></i> Our Mission</span></a></h3>
+											<div class="accordion-panel active">
+												<%- about_mission %>
+											</div>
+										</li>
+										<li>
+											<h3 class="skew-25"><a href="#"><span class="skew25"><i class="fas fa-eye"></i> Our Vision</span></a></h3>
+											<div class="accordion-panel">
+												<%- about_vision %>
+											</div>
+										</li>
+										<li>
+											<h3 class="skew-25"><a href="#"><span class="skew25"><i class="fas fa-flag"></i> Our Strategy</span></a></h3>
+											<div class="accordion-panel">
+												 <%- about_strategy %>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+											
+			</div>
+			<!-- Content End -->
+			
+			<!-- Footer start -->
+			<% include ./shared/footer %>	
+			<!-- Footer end -->
+		    
+		    <!-- Back to top Link -->
+	    	<div id="to-top" class="main-bg"><span class="fa fa-chevron-up"></span></div>
+	    	
+	    	
+	    </div>
+
+	    <% include ./shared/scripts %>	
+	</body>
+</html>
