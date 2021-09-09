@@ -91,19 +91,26 @@
 		
 				
 				<div class="padd-vertical-45">
-					<script type="text/javascript" src="<%= contactus_maps_key %>"></script>
+					<script type="text/javascript" async src="<%= contactus_maps_key %>"></script>
 					<div id="map_canvas" style="height: 450px; width: 100%;">
 				    <script type="text/javascript"> 
-						function init_map(){
+						function initMap() {
 							var latlngVal = "<%= contactus_mapmarker_LatLng %>".split(',');
 							var compaddress = "<%= contactus_mapmarker_address %>".split("*");
-				    		var myOptions = {zoom:17,center:new google.maps.LatLng(latlngVal[0], latlngVal[1]),
-				    		mapTypeId: google.maps.MapTypeId.ROADMAP};
-				    		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-				    		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(latlngVal[0], latlngVal[1])});
-				    		infowindow = new google.maps.InfoWindow({content:"<div class='noScroll'><b>Robotach (Private) Limited.</b><br/>"+compaddress[0]+"<br/>"+compaddress[1]+"</div>" });
-				    		google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-				    		infowindow.open(map,marker);} google.maps.event.addDomListener(window, 'load', init_map);
+							const uluru = { lat: Number(latlngVal[0]), lng: Number(latlngVal[1]) };
+							const map = new google.maps.Map(document.getElementById("map_canvas"), {
+								zoom: 17,
+								center: uluru,
+								mapTypeId: google.maps.MapTypeId.ROADMAP,
+							});
+							const infowindow = new google.maps.InfoWindow({content:"<div class='noScroll'><b>Robotach (Private) Limited.</b><br/>"+compaddress[0]+"<br/>"+compaddress[1]+"</div>" });
+							const marker = new google.maps.Marker({map: map,position: uluru});
+							infowindow.open({
+							anchor: marker,
+							map,
+							shouldFocus: false,
+							});
+						}													
 				    </script>
 		    	</div>
 				

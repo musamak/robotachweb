@@ -82,7 +82,7 @@
         "about_vision": "Growth with diversification fulfilling the aspiration and expectation of stakeholders with a significant contribution to the nation's economy.",
         "about_strategy": "The company remains focused on its core business of IoT, IIoT, System Integration, Robotics, and Blockchain while diversifying itself into new business areas of Artificial Intelligence, Big Data, and Manufacturing.",
         "contactus_message": "Customers are our top priority. You can send us your queries using the contact form. Alternatively, you can contact us using below mentioned contact information.",
-        "contactus_maps_key": "https://maps.google.com/maps/api/js?key=AIzaSyCz6jqdLggxJe6oNVIqqwpMzUYHRIWVVWI",
+        "contactus_maps_key": "https://maps.googleapis.com/maps/api/js?key=AIzaSyCz6jqdLggxJe6oNVIqqwpMzUYHRIWVVWI&callback=initMap",
         "contactus_mapmarker_LatLng": "24.81364,67.0481698",
         "contactus_mapmarker_address": "Stadium Commercial Area, Phase V, DHA, * Karachi-75500, Pakistan.",
         "contactus_email_host":"robotach.io",
