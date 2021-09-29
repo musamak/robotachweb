@@ -10,7 +10,7 @@
                     <ul>
                         <li class="footer-contact"><i class="fas fa-home"></i><span><%= company_address %></span></li>
                         <li class="footer-contact"><i class="fas fa-globe-americas"></i><span><a href="#"><%= info_email %></a></span></li>
-                        <li class="footer-contact"><i class="fas fa-phone"></i><span><%= main_phone %></span></li>
+                        <li class="footer-contact"><a href="<%= company_whatsapp_url %>" target="_blank"><i class="fa fa-whatsapp"></i><span><%= overseas_phone %></span></a></li>
                         <li class="footer-contact"><i class="fas fa-map-marker-alt"></i><span><a href="contactus#map_canvas">View our map</a></span></li>
                     </ul>
                 </div>
@@ -114,23 +114,23 @@
                 <!-- footer social links right cell start -->
                 <div class="cell-7">
                     <ul class="social-list right">
-                        <% if(company_linkedin_url != "") { %>
-                        <li class="skew-25"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
-                        <% } else { %>
-                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
-                        <% } if(company_facebook_url != "") { %>
+                        <% if(company_facebook_url != "") { %>
                         <li class="skew-25"><a href="<%= company_facebook_url %>" data-title="facebook" data-tooltip="true" target="_blank" ><span class="fa fa-facebook skew25"></span></a></li>
                         <% } else { %>
                         <li class="skew-25" style="visibility: hidden;"><a href="<%= company_facebook_url %>" data-title="facebook" data-tooltip="true" target="_blank" ><span class="fa fa-facebook skew25"></span></a></li>
-                        <% } if(company_skype_url != "") { %>
-                        <li class="skew-25" ><a href="<%= company_skype_url %>" data-title="skype" data-tooltip="true" target="_blank" ><span class="fa fa-skype skew25"></span></a></li>
+                        <% } if(company_twitter_url != "") { %>
+                        <li class="skew-25"><a href="<%= company_twitter_url %>" data-title="twitter" data-tooltip="true" target="_blank" ><span class="fa fa-twitter skew25"></span></a></li>
                         <% } else { %>
-                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_skype_url %>" data-title="skype" data-tooltip="true" target="_blank" ><span class="fa fa-skype skew25"></span></a></li>
-                        <% } if(company_youtube_url != "") { %>
-                        <li class="skew-25" ><a href="<%= company_youtube_url %>" data-title="YouTube" data-tooltip="true" target="_blank" ><span class="fa fa-youtube skew25"></span></a></li>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_twitter_url %>" data-title="twitter" data-tooltip="true" target="_blank" ><span class="fa fa-twitter skew25"></span></a></li>
+                        <% } if(company_linkedin_url != "") { %>
+                        <li class="skew-25"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
                         <% } else { %>
-                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_youtube_url %>" data-title="YouTube" data-tooltip="true" target="_blank" ><span class="fa fa-youtube skew25"></span></a></li>
-                        <% } %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_linkedin_url %>" data-title="linkedin" data-tooltip="true" target="_blank" ><span class="fa fa-linkedin skew25"></span></a></li>
+                        <% } if(company_whatsapp_url != "") { %>
+                        <li class="skew-25" ><a href="<%= company_whatsapp_url %>" data-title="whatsapp" data-tooltip="true" target="_blank" ><span class="fa fa-whatsapp skew25"></span></a></li>
+                        <% } else { %>
+                        <li class="skew-25" style="visibility: hidden;"><a href="<%= company_whatsapp_url %>" data-title="whatsapp" data-tooltip="true" target="_blank" ><span class="fa fa-whatsapp skew25"></span></a></li>
+                        <% } %> 
                     </ul>
                 </div>
                 <!-- footer social links right cell end -->
